@@ -1,0 +1,4 @@
+2560, 1600
+./InputLoadingScreens
+./OutputLoadingScreens
+LSMod.ini

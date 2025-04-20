@@ -1,0 +1,19 @@
+This mod adapts an outfit designed by doupu41 (twt). 
+You can see the concept art here: https://twitter.com/doupu41/status/1649010711060946944
+
+Toggle between jacket and no jacket with P.
+
+Several people were involved in the making of this mod, even though some things had to be scrapped and restarted again. 
+The people involved in the final version were:
+- Anilyan: For doing the initial model and textures, then also doing a better job at both at the end
+- Shuffleo: For putting the original version of the model together
+- Polymer: For joining the textures and preparing an initial lightmap
+- Mecchi/mimo4e: For doing the weights
+Other people whose attempts at weighting ended up scrapped but did their best were Fuyukai, Shuffleo and Skittey
+
+There is now a version with...
+- an alternate hair and pupils - hair made by rafikplz: https://gamebanana.com/mods/472051
+- his skin hair - version was put together by Himephobia: https://gamebanana.com/members/2922345
+
+Now me (Anilyan) and mecchi have a collective Patreon, so if you join, you can get double the early access mods with only one subscription ^^
+Here: https://www.patreon.com/mimarimods

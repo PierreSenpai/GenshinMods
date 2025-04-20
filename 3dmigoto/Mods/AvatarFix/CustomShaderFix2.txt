@@ -1,0 +1,102 @@
+// Avatar Fix
+cbuffer cb2 : register(b2)
+{
+  float4 cb2[21];
+}
+
+cbuffer cb1 : register(b1)
+{
+  float4 cb1[4];
+}
+
+cbuffer cb0 : register(b0)
+{
+  float4 cb0[15];
+}
+
+
+struct vb_struct {
+    float3 POSITION; 	// Offset:    0
+	uint COLOR; 		// Offset:    12 (unorm8(1,1,1,1))
+	float2 TEXCOORD; 	// Offset:    16
+};
+
+// 3Dmigoto declarations
+#define cmp -
+Texture1D<float4> IniParams : register(t120);
+Texture2D<float4> StereoParams : register(t125);
+
+StructuredBuffer<vb_struct> vb0 : register(t0);
+
+#define first_vertex IniParams[0].x
+
+void main(
+  float4 v0 : POSITION0,
+  float4 v1 : COLOR0,
+  float2 v2 : TEXCOORD0,
+  uint vertex : SV_VertexID,
+  out float4 o0 : SV_POSITION0,
+  out float4 o1 : COLOR0,
+  out float2 o2 : TEXCOORD0,
+  out float4 o3 : TEXCOORD1)
+{
+  float4 r0,r1;
+  uint4 bitmask, uiDest;
+  float4 fDest;
+    
+	float4 pos = float4(vb0[first_vertex + 0].POSITION.xy,vb0[first_vertex + 2].POSITION.xy);
+	float4 texcord = float4(vb0[first_vertex + 0].TEXCOORD.xy,vb0[first_vertex + 2].TEXCOORD.xy);
+	
+	float2 RealSize = float2(abs((pos.z - pos.x)/(1-(texcord.x + (1 - texcord.z)))),abs((pos.w - pos.y)/(1-(texcord.w + (1 - texcord.y)))));
+	switch(vertex)
+	{
+		case 0: 
+			v0.x = v0.x - (v2.x * RealSize.x);
+			v0.y = v0.y - (v2.y * RealSize.y);
+			
+			v2.xy = float2(0, 0);
+			break;
+		case 1: 
+			v0.x = v0.x - (v2.x * RealSize.x);
+			v0.y = v0.y + ((1-v2.y) * RealSize.y);
+			v2.xy = float2(0, 1);
+			break;
+		case 2: 
+			v0.x = v0.x + ((1-v2.x) * RealSize.x);
+			v0.y = v0.y + ((1-v2.y) * RealSize.y);
+			v2.xy = float2(1, 1);
+			break;
+		case 3: 
+			v0.x = v0.x + ((1-v2.x) * RealSize.x);
+			v0.y = v0.y - (v2.y * RealSize.y);
+			v2.xy = float2(1, 0);
+			break;
+		default:
+			break;
+	} 
+	
+
+  r0.xyzw = cb1[1].xyzw * v0.yyyy;
+  r0.xyzw = cb1[0].xyzw * v0.xxxx + r0.xyzw;
+  r0.xyzw = cb1[2].xyzw * v0.zzzz + r0.xyzw;
+  r0.xyzw = cb1[3].xyzw + r0.xyzw;
+  r1.xyzw = cb2[18].xyzw * r0.yyyy;
+  r1.xyzw = cb2[17].xyzw * r0.xxxx + r1.xyzw;
+  r1.xyzw = cb2[19].xyzw * r0.zzzz + r1.xyzw;
+  o0.xyzw = cb2[20].xyzw * r0.wwww + r1.xyzw;
+  r0.xyzw = cb0[14].xyzw * v1.xyzw;
+  r0.xyz = max(float3(0,0,0), r0.xyz);
+  o1.w = r0.w;
+  r0.xyz = log2(r0.xyz);
+  r0.xyz = float3(0.416666657,0.416666657,0.416666657) * r0.xyz;
+  r0.xyz = exp2(r0.xyz);
+  r0.xyz = r0.xyz * float3(1.05499995,1.05499995,1.05499995) + float3(-0.0549999997,-0.0549999997,-0.0549999997);
+  o1.xyz = max(float3(0,0,0), r0.xyz);
+  o2.xy = v2.xy;
+  r0.xy = cb0[4].xy * v0.yy;
+  r0.xy = cb0[3].xy * v0.xx + r0.xy;
+  r0.xy = cb0[5].xy * v0.zz + r0.xy;
+  o3.zw = cb0[6].xy * v0.ww + r0.xy;
+  o3.xy = v0.xy;
+  return;
+}
