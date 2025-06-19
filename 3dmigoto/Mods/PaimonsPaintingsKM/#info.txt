@@ -11,7 +11,7 @@ Etc...
  - Reload mods when Genshin is open by pressing F10 (by default)
 
 4th Anniversary...
- - To switch to the anniversary emojis, rename "DISABLED4th" to "4th".
+ - To switch to the anniversary emojis, rename "DISABLED4th" to "4th"
 
 To view .DDS images, download the image viewer Irfanview and install the plugins from the same page: (https://www.irfanview.com/64bit.htm) Because the images are upside down (I don't get it either), you'll need to press V in Irfanview to flip them. Press T when viewing an image to view all images in that folder as thumbnails.
 
@@ -25,8 +25,8 @@ Thanks to...
 Avatars/Portraits/Side icons as splash arts: https://gamebanana.com/mods/473655 (@Deztract)
 Paimon's Paintings Portraits: https://gamebanana.com/mods/475764 (@complex31)
 PNG Emojis Collection: https://www.hoyolab.com/article/4303677 (@Lynnsa)
-Genshin Impact Wiki: https://genshin-impact.fandom.com/wiki/Genshin_Impact_Wiki
-4th Anniversary Emojis: https://genshinimpactresources.tumblr.com
+Genshin Wiki: https://genshin-impact.fandom.com/wiki/Paimon%27s_Paintings
+Genshin Resources: https://genshinimpactresources.tumblr.com/tagged/paimon%27s%20paintings
 
 	--
 
