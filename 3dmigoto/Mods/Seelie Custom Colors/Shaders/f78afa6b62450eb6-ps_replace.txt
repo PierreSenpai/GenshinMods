@@ -32,7 +32,7 @@ cbuffer cb0 : register(b0)
 #define cmp -
 Texture1D<float4> IniParams : register(t120);
 Texture2D<float4> StereoParams : register(t125);
-#define TINT IniParams[181].xyz
+#define TINT IniParams[181].xyzw
 #define ACTIVE IniParams[182].x
 
 
@@ -141,7 +141,11 @@ if (ACTIVE == 0) {
   r0.z = r1.x + r0.z;
   r0.z = r2.x * cb0[91].y + r0.z;
   r0.z = -cb0[91].z + r0.z;
+if (ACTIVE == 0) {
   r0.z = saturate(cb0[88].z * r0.z);
+} else {
+  r0.z = saturate(cb0[88].z * r0.z) * TINT.w;
+}
   r0.z = v1.w * r0.z;
   r0.y = r0.z * r0.y;
   r0.y = r0.y * r0.w;

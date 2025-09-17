@@ -5,28 +5,27 @@ Change emojis...
  2. Edit "emojis.ini" to change the numbers
     (Keep them as .dds - no need to use .png!)
 
-Etc...
- - Emoji files with ~ aren't from the Paimon's Paintings sets
- - Disable emojis for profile avatars by deleting "profile.ini"
- - Reload mods when Genshin is open by pressing F10 (by default)
+Better way to change emojis and keep the changes...
+ 1. Make a copy of the emojis file and rename it to @swap
+ 2. Delete everything in it except for "namespace = paimon"
+    and the characters you plan to change the emojis of
+ 3. Carry the @swap file with you between versions
+✧ Keep the @ symbol, as that allows it to load first
 
 4th Anniversary...
  - To switch to the anniversary emojis, rename "DISABLED4th" to "4th"
 
-To view .DDS images, download the image viewer Irfanview and install the plugins from the same page: (https://www.irfanview.com/64bit.htm) Because the images are upside down (I don't get it either), you'll need to press V in Irfanview to flip them. Press T when viewing an image to view all images in that folder as thumbnails.
-
-To edit .DDS images, download Paint.net: https://www.getpaint.net
-
-To batch process images, try chaiNNer: https://github.com/chaiNNer-org/chaiNNer
+Etc...
+ - Emoji files with ~ aren't from the Paimon's Paintings sets
+ - Disable emojis for profile avatars by deleting "profile.ini"
+ - Reload mods when Genshin is open by pressing F10 (by default)
 
 	--
 
 Thanks to...
 Avatars/Portraits/Side icons as splash arts: https://gamebanana.com/mods/473655 (@Deztract)
 Paimon's Paintings Portraits: https://gamebanana.com/mods/475764 (@complex31)
-PNG Emojis Collection: https://www.hoyolab.com/article/4303677 (@Lynnsa)
-Genshin Wiki: https://genshin-impact.fandom.com/wiki/Paimon%27s_Paintings
-Genshin Resources: https://genshinimpactresources.tumblr.com/tagged/paimon%27s%20paintings
+Genshin Resources: https://genshinimpactresources.tumblr.com
 
 	--
 
