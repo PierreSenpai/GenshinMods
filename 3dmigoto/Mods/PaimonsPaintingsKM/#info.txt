@@ -6,14 +6,20 @@ Change emojis...
     (Keep them as .dds - no need to use .png!)
 
 Better way to change emojis and keep the changes...
- 1. Make a copy of the emojis file and rename it to @swap
+ 1. Make a copy of the emojis file and rename it to #swap
  2. Delete everything in it except for "namespace = paimon"
     and the characters you plan to change the emojis of
- 3. Carry the @swap file with you between versions
-✧ Keep the @ symbol, as that allows it to load first
+ 3. Carry the #swap file with you between versions
+✧ Keep the hashtag, as that allows it to load first
 
 4th Anniversary...
  - To switch to the anniversary emojis, rename "DISABLED4th" to "4th"
+
+Coloured add-on...
+ 1. Download the optional file from GameBanana
+ 2. Extract and move (Ctrl+X) the "emojis" folder
+ 3. Paste (Ctrl+V) over the original "emojis" folder
+   (It works for both versions: Controller/Keyboard)
 
 Etc...
  - Emoji files with ~ aren't from the Paimon's Paintings sets
