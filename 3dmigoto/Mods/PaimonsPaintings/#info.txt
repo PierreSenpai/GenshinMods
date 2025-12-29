@@ -17,9 +17,9 @@ Better way to change emojis and keep the changes...
 
 Coloured add-on...
  1. Download the optional file from GameBanana
- 2. Extract and move (Ctrl+X) the "emojis" folder
+ 2. Extract, then move (Ctrl+X) the "emojis" folder
  3. Paste (Ctrl+V) over the original "emojis" folder
-   (It works for both versions: Controller/Keyboard)
+✧ It works for both versions: Controller/Keyboard
 
 Etc...
  - Emoji files with ~ aren't from the Paimon's Paintings sets
